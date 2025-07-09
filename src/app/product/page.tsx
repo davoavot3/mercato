@@ -1,16 +1,16 @@
 "use client"
-
 import ProductDetails from "@/components/product-details";
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function Page() {
 
-  const searchParam = useSearchParams();
-  const id = searchParam.get("id")??"";
 
   return (
    <div>
-       <ProductDetails id={id}/>
+       <Suspense fallback="...loading">
+        
+        <ProductDetails />
+       </Suspense>
    </div>
   );
 }
