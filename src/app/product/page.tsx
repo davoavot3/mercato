@@ -1,9 +1,6 @@
 "use client"
 
 import ProductDetails from "@/components/product-details";
-import ProductLists from "@/components/product-lists";
-import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 export default function Page() {
